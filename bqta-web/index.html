@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BQTA Closed-Loop Simulation</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-box">
+                <i class="fa-solid fa-microchip neon-icon"></i>
+                <h1><span class="highlight">BQTA</span> Advanced Live Mockup</h1>
+            </div>
+            <div class="status-indicator">
+                <span class="dot pulse"></span>
+                <span>System Online</span>
+            </div>
+        </header>
+
+        <!-- Architecture Flow Panel from mockup.py -->
+        <section class="architecture-panel glass-panel">
+            <h2><i class="fa-solid fa-network-wired"></i> BQTA Process Architecture</h2>
+            <div class="flow-diagram">
+
+                <!-- Row 1: Forward Path -->
+                <div class="flow-node grid-pos-row-1 grid-pos-col-1 anim-target-1">
+                    <div class="node-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+                    <span>User<br>(Brain Signal)</span>
+                </div>
+
+                <div class="flow-connector grid-pos-row-1 grid-pos-col-2 anim-target-2">
+                    <div class="beam"></div>
+                </div>
+
+                <div class="flow-node grid-pos-row-1 grid-pos-col-3 anim-target-3">
+                    <div class="node-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+                    <span>Neural<br>Interface</span>
+                </div>
+
+                <div class="flow-connector grid-pos-row-1 grid-pos-col-4 anim-target-4">
+                    <div class="beam"></div>
+                </div>
+
+                <div class="flow-node highlight-node grid-pos-row-1 grid-pos-col-5 anim-target-5">
+                    <div class="node-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <span>BQTA Core<br>(Bio-Quantum)</span>
+                </div>
+
+                <div class="flow-connector grid-pos-row-1 grid-pos-col-6 anim-target-6">
+                    <div class="beam"></div>
+                </div>
+
+                <div class="flow-node grid-pos-row-1 grid-pos-col-7 anim-target-7">
+                    <div class="node-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <span>Quantum<br>Network</span>
+                </div>
+
+                <div class="flow-connector grid-pos-row-1 grid-pos-col-8 anim-target-8">
+                    <div class="beam"></div>
+                </div>
+
+                <div class="flow-node end-node grid-pos-row-1 grid-pos-col-9 anim-target-9">
+                    <div class="node-icon"><i class="fa-solid fa-robot"></i></div>
+                    <span>Robotic<br>Arm</span>
+                </div>
+
+                <!-- Row 2: Vertical Connections -->
+                <div class="flow-connector-vertical down-arrow grid-pos-row-2 grid-pos-col-9 anim-target-10">
+                    <div class="beam-vertical"></div>
+                </div>
+
+                <div class="flow-connector-vertical up-arrow grid-pos-row-2 grid-pos-col-5 anim-target-14">
+                    <div class="beam-vertical"></div>
+                </div>
+
+                <!-- Row 3: Return Path (Right to Left) -->
+                <div class="flow-connector reverse-connector grid-pos-row-3 grid-pos-col-8 anim-target-11">
+                    <div class="beam beam-reverse"></div>
+                </div>
+
+                <div class="flow-node feedback-node grid-pos-row-3 grid-pos-col-7 anim-target-12">
+                    <div class="node-icon"><i class="fa-solid fa-wave-square"></i></div>
+                    <span>Haptic<br>Feedback</span>
+                </div>
+
+                <div class="flow-connector reverse-connector grid-pos-row-3 grid-pos-col-6 anim-target-13">
+                    <div class="beam beam-reverse"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <main class="main-content">
+            <!-- Controls Panel -->
+            <section class="controls-panel glass-panel">
+                <h2><i class="fa-solid fa-sliders"></i> Simulation Params</h2>
+
+                <div class="control-group">
+                    <label for="userForce">
+                        <span>User Force (N)</span>
+                        <span id="userForceValue" class="value-display">5</span>
+                    </label>
+                    <input type="range" id="userForce" min="1" max="10" step="1" value="5" class="custom-slider">
+                </div>
+
+                <div class="control-group">
+                    <label for="latency">
+                        <span>Latency (ms)</span>
+                        <span id="latencyValue" class="value-display">20</span>
+                    </label>
+                    <input type="range" id="latency" min="0" max="100" step="5" value="20" class="custom-slider">
+                </div>
+
+                <div class="control-group">
+                    <label for="packetLoss">
+                        <span>Packet Loss (%)</span>
+                        <span id="packetLossValue" class="value-display">10</span>
+                    </label>
+                    <input type="range" id="packetLoss" min="0" max="50" step="5" value="10"
+                        class="custom-slider danger-slider">
+                </div>
+
+                <div class="control-group switch-group">
+                    <label for="aiPrediction">
+                        <span><i class="fa-solid fa-brain"></i> AI Prediction Recovery</span>
+                    </label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="aiPrediction" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="panel-footer">
+                    <button id="resetBtn" class="action-btn"><i class="fa-solid fa-rotate-right"></i> Reset</button>
+                    <button id="refreshDataBtn" class="action-btn primary"><i class="fa-solid fa-bolt"></i> Resimulate
+                        Noise</button>
+                </div>
+            </section>
+
+            <!-- Chart Panel -->
+            <section class="chart-panel glass-panel">
+                <div class="chart-header">
+                    <h2><i class="fa-solid fa-chart-line"></i> Closed-Loop Signal Telemetry</h2>
+                    <div class="legend-custom">
+                        <div class="legend-item"><span class="color-box robotic"></span> Robotic Signal</div>
+                        <div class="legend-item"><span class="color-box feedback"></span> Haptic Feedback</div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="signalChart"></canvas>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>BQTA Teleoperation Subsystem &copy; 2026</p>
+            <div class="signal-bars">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+                <div class="bar bar-4"></div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
