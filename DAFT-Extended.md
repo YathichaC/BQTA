@@ -229,12 +229,12 @@ class PredictiveReliabilityModel:
         
         loss = (alpha * latency) + (beta * jitter) + (gamma * congestion)
         return loss
-
+```
 class BARP:
     """Calculates optimal routing cost for bio-adaptive paths."""
     def calculate_route_cost(self, latency, congestion, risk):
         return latency + congestion + risk
-
+```
 class TripleLayerNetwork:
     """Core controller for the Triple-Layer BQTA network."""
     def __init__(self):
@@ -243,7 +243,7 @@ class TripleLayerNetwork:
     def route_packet(self, packet):
         # Implementation of the optimal path selection
         return "optimal_path"
-
+```
 ## Chapter 15 — System Validation Code
 ### Python Implementation
 
@@ -257,7 +257,7 @@ def test_latency(latency):
         return "PASS"
     
     return "FAIL"
-
+```
 # --- Execution Example ---
 # การทดสอบด้วยค่าความหน่วง 0.7 ms
 result = test_latency(0.7)
