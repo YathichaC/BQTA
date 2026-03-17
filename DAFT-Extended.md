@@ -229,12 +229,11 @@ class PredictiveReliabilityModel:
         
         loss = (alpha * latency) + (beta * jitter) + (gamma * congestion)
         return loss
-```
 class BARP:
     """Calculates optimal routing cost for bio-adaptive paths."""
     def calculate_route_cost(self, latency, congestion, risk):
         return latency + congestion + risk
-```
+
 class TripleLayerNetwork:
     """Core controller for the Triple-Layer BQTA network."""
     def __init__(self):
@@ -258,12 +257,18 @@ def test_latency(latency):
     
     return "FAIL"
 ```
-# --- Execution Example ---
+### Execution Example
 # การทดสอบด้วยค่าความหน่วง 0.7 ms
+```python
 result = test_latency(0.7)
-print(f"Latency Validation Result: {result}") 
+print(f"Latency Validation Result: {result}")
+```
 
-# Output: PASS
+Output
+
+```
+Latency Validation Result: PASS
+```
 
 ## Closing Statement
 
