@@ -85,6 +85,7 @@ $$R = 1 - P_{loss}$$
 ```python
 if predicted_loss > threshold:
     reroute_packet()
+```
 ### Chapter 3 — Framework Reasoning (F)
 The reasoning framework integrates biological sensing signals with network-level protocols to ensure synchronization.
 
