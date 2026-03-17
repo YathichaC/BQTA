@@ -1,4 +1,3 @@
-````md
 # DAFT: BQTA — Bio-Quantum Tactile Architecture
 
 ---
@@ -6,10 +5,7 @@
 <div align="center">
 
 # DAFT
-
----
-
-*Digital Twin · AI Models · Framework Reasoning · Triple-Layer Network*
+### Digital Twin · AI Models · Framework Reasoning · Triple-Layer Network
 
 **Extended Edition · 2026**
 
@@ -21,33 +17,27 @@
 ---
 
 </div>
-
----
-
-# Navigation Guide
+## Navigation Guide
 
 | Reader Profile | Start Here | Skip |
 |---|---|---|
-| Executive | Executive Summary | Theory |
+| Executive | Executive Summary | Theory sections |
 | Engineer | Implementation Guide | Mathematical sections |
 | Researcher | Theoretical Architecture | Code examples |
 
 ---
 
-# Executive Summary
+## Executive Summary
 
-**DAFT (Digital Twin, AI Models, Framework, Triple-Layer Network)**  
-is the intelligent architecture used in **BQTA (Bio-Quantum Tactile Architecture)**.
+**DAFT (Digital Twin, AI Models, Framework, Triple-Layer Network)** is the intelligent architecture used in **BQTA (Bio-Quantum Tactile Architecture)**.
 
-The framework integrates
-
+The framework integrates:
 - Bio-Inspired Routing
 - Quantum Communication
 - AI Prediction
 - Ultra-Low Latency Networking
 
-Target Applications
-
+**Target Applications:**
 - Haptic Tele-Surgery
 - Remote Robotics
 - Industrial Tele-operation
@@ -55,213 +45,141 @@ Target Applications
 
 ---
 
-# Part I — Theoretical Architecture
-
----
-
-# Chapter 1 — Digital Twin (D)
+## Part I — Theoretical Architecture
+## Chapter 1 — Digital Twin (D)
 
 Digital Twin connects the **Physical Layer** with the **Quantum-Tactile Channel**.
 
-Physical Layer  
-↓  
-Quantum-Tactile Channel  
-↓  
-Digital Twin Simulation  
+**System Pipeline:**
+Physical Layer $\rightarrow$ Quantum-Tactile Channel $\rightarrow$ Digital Twin Simulation
 
-Mathematical model
-
-S_d(t) = f(S_p(t))
+**Mathematical Model:**
+$$S_d(t) = f(S_p(t))$$
 
 | Variable | Meaning |
 |---|---|
-| S_p | physical state |
-| S_d | digital twin state |
+| $S_p$ | physical state |
+| $S_d$ | digital twin state |
 
-Future prediction
-
-S_future = S_current + ΔS
-
-Digital Twin enables simulation before deployment.
+**Future Prediction:**
+$$S_{future} = S_{current} + \Delta S$$
 
 ---
 
-# Chapter 2 — AI Models (A)
+## Chapter 2 — AI Models (A)
 
-AI operates in the **Transport Layer**.
+AI operates in the **Transport Layer** via the **Predictive Reliability Protocol (PRP)**.
 
-Main protocol:
+**Objectives:**
+- Predict packet loss
+- Maintain reliability
+- Reduce retransmission
 
-Predictive Reliability Protocol (PRP)
+**Packet Loss Model:**
+$$P_{loss} = \frac{Latency + Jitter}{SignalStrength}$$
 
-Objectives
+**Network Reliability:**
+$$R = 1 - P_{loss}$$
 
-- predict packet loss
-- maintain reliability
-- reduce retransmission
+**AI Decision Rule:**
+```python
+if predicted_loss > threshold:
+    reroute_packet()
+### Chapter 3 — Framework Reasoning (F)
+The reasoning framework integrates biological sensing signals with network-level protocols to ensure synchronization.
 
-Packet loss model
+**Protocol Mapping:**
+| Layer | Protocol | Function |
+| :--- | :--- | :--- |
+| Session | Neural Sync Protocol (NSP) | Time-alignment of bio-signals |
+| Presentation | Sensory Encoding | Data compression and translation |
 
-P_loss = (Latency + Jitter) / SignalStrength
+**Synchronization Model:**
+$$Sync = f(signal_{bio}, signal_{network})$$
 
-Network reliability
-
-R = 1 − P_loss
-
-AI decision rule
-
-if predicted_loss > threshold  
-reroute_packet()
-
----
-
-# Chapter 3 — Framework Reasoning (F)
-
-Framework integrates biological signals with network signals.
-
-| Layer | Protocol |
-|---|---|
-| Session | Neural Sync Protocol (NSP) |
-| Presentation | Sensory Encoding |
-
-Synchronization model
-
-Sync = f(signal_bio , signal_network)
-
-Data Flow
-
-Application  
-↓  
-Framework Reasoning  
-↓  
-Transport Layer  
+**Data Flow:**
+Application $\rightarrow$ Framework Reasoning $\rightarrow$ Transport Layer
 
 ---
 
-# Chapter 4 — Triple-Layer Network (T)
+### Chapter 4 — Triple-Layer Network (T)
+BQTA utilizes three intelligent layers for adaptive tactile networking:
 
-BQTA uses three intelligent layers.
-
-| Layer | Protocol |
-|---|---|
-| Data Link | QLC |
-| Network | BARP |
-| Transport | PRP |
+| Layer | Protocol | Key Role |
+| :--- | :--- | :--- |
+| Data Link | QLC | Link Stability |
+| Network | BARP | Adaptive Routing |
+| Transport | PRP | Predictive Reliability |
 
 ---
 
-# Chapter 5 — Quantum Link Control (QLC)
+### Chapter 5 — Quantum Link Control (QLC)
+QLC ensures link-level stability and jitter reduction in the quantum-tactile channel.
 
-QLC ensures link-level stability.
-
-Responsibilities
-
-- error correction
-- jitter reduction
-- frame management
-
-Metrics monitored
-
+**Metrics Monitored:**
 | Metric | Meaning |
-|---|---|
-| RSSI | signal strength |
-| latency | transmission delay |
-| error rate | packet errors |
+| :--- | :--- |
+| RSSI | Signal strength |
+| Latency | Transmission delay |
+| Error Rate | Packet errors |
 
 ---
 
-# Chapter 6 — Bio-Adaptive Routing Protocol (BARP)
+### Chapter 6 — Bio-Adaptive Routing Protocol (BARP)
+A bio-inspired routing algorithm that adjusts paths based on biological urgency and network conditions.
 
-Bio-Inspired dynamic routing.
+**Routing Cost Function:**
+$$Cost = Latency + Congestion + Risk$$
 
-Routing cost function
-
-Cost = latency + congestion + risk
-
-Routing objective
-
-minimize(Cost)
-
-Features
-
-- adaptive routing
-- dynamic path selection
-- self-healing network
+**Routing Objective:**
+$$\min(Cost)$$
 
 ---
 
-# Chapter 7 — Predictive Reliability Protocol (PRP)
+### Chapter 7 — Predictive Reliability Protocol (PRP)
+PRP uses AI models to predict potential packet loss before transmission occurs.
 
-PRP predicts packet loss before transmission.
-
-Capabilities
-
-- congestion prediction
-- reliability optimization
-- retransmission reduction
-
-Reliability function
-
-R = SuccessfulPackets / TotalPackets
+**Reliability Function:**
+$$R = \frac{SuccessfulPackets}{TotalPackets}$$
 
 ---
 
-# Chapter 8 — Quantum-Tactile Channel
+### Chapter 8 — Quantum-Tactile Channel
+The physical layer supporting ultra-reliable tactile communication.
 
-Physical layer supporting tactile communication.
-
-Characteristics
-
-- ultra-low latency
-- high bandwidth
-- quantum secure channel
-
-Signal model
-
-Q_t = f(TactileSignal , QuantumState)
+**Signal Model:**
+$$Q_t = f(TactileSignal, QuantumState)$$
 
 ---
 
-# Part II — Domain Interface Mapping
+## Part II — Domain Interface Mapping
 
----
-
-# Chapter 9 — Biological Interface
-
-Mapping biological signals into network packets.
+### Chapter 9 — Biological Interface
+Mapping biological sensing signals into network-compatible representations.
 
 | Bio Signal | Network Representation |
-|---|---|
+| :--- | :--- |
 | neural impulse | digital packet |
 | tactile pressure | haptic signal |
 | motor command | control packet |
 
-Signal transformation
-
-Bio Signal → Digital Encoding → Network Packet
+**Transformation:** Bio Signal $\rightarrow$ Digital Encoding $\rightarrow$ Network Packet
 
 ---
 
-# Chapter 10 — Physical Propagation Model
+### Chapter 10 — Physical Propagation Model
+Describes how signals degrade over the quantum-tactile medium.
 
-Signal propagation model
-
-Signal(t) = Signal₀ e^(−kt)
-
-Factors affecting propagation
-
-- distance
-- interference
-- channel noise
+**Propagation Model:**
+$$Signal(t) = Signal_0 e^{-kt}$$
 
 ---
 
-# Chapter 11 — Networking Domain Mapping
+### Chapter 11 — Networking Domain Mapping
+Comparison between standard OSI layers and the BQTA architecture.
 
-Mapping OSI to BQTA architecture.
-
-| OSI Layer | BQTA |
-|---|---|
+| OSI Layer | BQTA Layer |
+| :--- | :--- |
 | Application | Tactile Applications |
 | Session | NSP |
 | Transport | PRP |
@@ -270,121 +188,96 @@ Mapping OSI to BQTA architecture.
 
 ---
 
-# Part III — Validation Framework
+## Part III — Validation Framework
 
----
-
-# Chapter 12 — Experimental Scenarios
-
+### Chapter 12 — Experimental Scenarios
 | Scenario | Description |
-|---|---|
-| B1 | Digital Twin simulation |
-| B2 | AI anomaly detection |
-| B3 | adaptive routing |
-| B4 | tactile network deployment |
+| :--- | :--- |
+| B1 | Digital Twin simulation for path prediction |
+| B2 | AI anomaly detection in bio-signals |
+| B3 | Adaptive routing optimization under congestion |
+| B4 | End-to-end tactile network deployment |
 
 ---
 
-# Chapter 13 — Performance Metrics
+### Chapter 13 — Performance Metrics
+System targets for next-generation tactile communication.
 
 | Metric | Target |
-|---|---|
-| latency | <1 ms |
-| reliability | >99% |
-| packet loss | <1% |
+| :--- | :--- |
+| Latency | < 1 ms |
+| Reliability | > 99% |
+| Packet Loss | < 1% |
 
-Latency model
-
-Latency_total = L_network + L_processing
-
-Reliability model
-
-R = successful_packets / total_packets
+**Evaluation Models:**
+- $Latency_{total} = L_{network} + L_{processing}$
+- $R = \frac{successful\_packets}{total\_packets}$
 
 ---
 
-# Part IV — Implementation Guide
+## Part IV — Implementation Guide
 
----
-
-# Chapter 14 — Core DAFT Modules
+### Chapter 14 — Core DAFT Modules
 
 ```python
 class PredictiveReliabilityModel:
-
+    """Predicts packet loss based on network metrics."""
     def predict_packet_loss(self, latency, jitter, congestion):
-
-        alpha = 0.01
-        beta = 0.02
-        gamma = 0.03
-
-        loss = alpha*latency + beta*jitter + gamma*congestion
-
+        # Weight parameters for prediction logic
+        alpha, beta, gamma = 0.01, 0.02, 0.03
+        
+        loss = (alpha * latency) + (beta * jitter) + (gamma * congestion)
         return loss
 
-
 class BARP:
-
+    """Calculates optimal routing cost for bio-adaptive paths."""
     def calculate_route_cost(self, latency, congestion, risk):
-
         return latency + congestion + risk
 
-
 class TripleLayerNetwork:
-
+    """Core controller for the Triple-Layer BQTA network."""
     def __init__(self):
         self.routes = []
 
     def route_packet(self, packet):
-
+        # Implementation of the optimal path selection
         return "optimal_path"
-````
 
----
-
-# Chapter 15 — System Validation Code
+## Chapter 15 — System Validation Code
+### Python Implementation
 
 ```python
 def test_latency(latency):
-
+    """
+    Validation check for ultra-low latency requirements.
+    Target: latency < 1 ms
+    """
     if latency < 1:
         return "PASS"
-
+    
     return "FAIL"
-```
 
-Example
+# --- Execution Example ---
+# การทดสอบด้วยค่าความหน่วง 0.7 ms
+result = test_latency(0.7)
+print(f"Latency Validation Result: {result}") 
 
-test_latency(0.7)
+# Output: PASS
 
-Output
+## Closing Statement
 
-PASS
+**DAFT** provides the core intelligence framework for **BQTA networks**. By seamlessly integrating **Digital Twin simulation**, **AI reliability prediction**, and **Triple-layer network protocols**, the architecture enables ultra-reliable, real-time tactile communication. 
 
----
+This framework serves as the backbone for next-generation mission-critical applications, including:
 
-# Closing Statement
-
-DAFT provides the intelligence framework for **BQTA networks**.
-
-By integrating
-
-* Digital Twin simulation
-* AI reliability prediction
-* Framework reasoning
-* Triple-layer network protocols
-
-the architecture enables **real-time tactile communication** for
-
-* Haptic Tele-Surgery
-* Remote Robotics
-* Immersive Metaverse
+* **Haptic Tele-Surgery**: Enabling precise, lag-free remote medical procedures.
+* **Remote Robotics**: Providing tactile feedback for complex industrial and exploration tasks.
+* **Immersive Metaverse**: Creating high-fidelity, touch-sensitive virtual environments.
 
 ---
 
-**End of Document**
+<div align="center">
 
-DAFT — BQTA Extended Framework
+**DAFT — BQTA Extended Framework | 2026** *Digital Twin · AI Models · Framework Reasoning · Triple-Layer Network*
 
-```
-```
+</div>
